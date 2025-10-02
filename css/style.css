@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+    color: #e0e7ef;
+    scroll-behavior: smooth;
+    height: 100vh; 
+    width: 100%; 
+    background-image: url("https://wallpapers.com/images/hd/black-space-background-9lnv16cb5dyowb4j.jpg"); 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+}
+   
+.scrollbar-hide::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scrollbar-hide::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.nav-link {
+    font-family: "Marcellus SC", serif;
+    background: linear-gradient(to right, #4FB7B3, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    text-decoration: none;
+    font-size: 1.7rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    background: linear-gradient(to right, #ffffff, #690ade, #ec0772);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    text-decoration: none; 
+}
+
+.orbitron, .explore{
+    font-family: 'Orbitron', monospace;
+}
+
+.explore {
+    background: linear-gradient(to right, #4FB7B3, #a855f7);
+    color: white; 
+    font-weight: 700; 
+    padding: 0.75rem 2rem; 
+    border-radius: 9999px; 
+    text-decoration: none; 
+    font-size: 1.25rem; 
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+.planet-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(1.1); opacity: 1; }
+}
+
+.meteor {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    animation: meteor-fall 3s linear infinite;
+}
+
+@keyframes meteor-fall {
+    0% {
+        transform: translateY(-100px) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(calc(100vh + 100px)) translateX(100px);
+        opacity: 0;
+    }
+}
+
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px) rotateX(5deg);
+}
+
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.orbit-path {
+    stroke-dasharray: 5, 5;
+    animation: orbit 20s linear infinite;
+}
+
+@keyframes orbit {
+    0% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: 100; }
+}

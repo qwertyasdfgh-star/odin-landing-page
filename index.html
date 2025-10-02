@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo-Verse - Explore the Planets</title>
+    <link rel="icon" href="./image/planet.png" type="image/x-icon"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-morphism">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="orbitron text-2xl font-bold text-white flex items-center gap-2">
+                <svg width="40px" height="40px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#3B82F6"/>
+                            <stop offset="50%" style="stop-color:#06B6D4"/>
+                            <stop offset="100%" style="stop-color:#EC4899"/>
+                        </linearGradient>
+                    </defs>
+                    <g id="SVGRepo_iconCarrier">
+                        <title>ionicons-v5-p</title>
+                        <path fill="url(#logoGradient)" d="M81,274.71C90.36,363,165.26,432,256,432a174.91,174.91,0,0,0,71.49-15.19c-40.3-16.53-84.05-38.17-127.77-63.36C157,328.86,115.84,301.5,81,274.71Z"></path>
+                        <path fill="url(#logoGradient)" d="M492.72,339.51c-8.5-11.31-20-23.8-34-37a205.25,205.25,0,0,1-11,34c28.72,29.5,33.2,45.34,32.17,48.45-2,2.23-17.05,6.89-58.15-3.53q-8.83-2.24-19.32-5.46-6.76-2.08-13.79-4.49h0a176.76,176.76,0,0,0,19.54-27.25c.17-.29.35-.58.52-.88A175.39,175.39,0,0,0,432,256,178.87,178.87,0,0,0,431,237C421.43,148.83,346.6,80,256,80A175.37,175.37,0,0,0,149.6,115.89a177.4,177.4,0,0,0-45.83,51.84c-.16.29-.34.58-.51.87a175.48,175.48,0,0,0-13.83,30.52q-5.59-4.87-10.79-9.67c-5.39-5-10.17-9.63-14.42-14C34.65,145.19,31.13,129.84,32.06,127c2.16-2.43,18.1-6.54,58.13,3.55a209.88,209.88,0,0,1,24-26.56c-18.86-5.61-35.79-9.35-50.05-11C33.41,89.47,13.3,95.52,4.35,111,1.11,116.58-2,126.09,1.63,139.6,7,159.66,26.14,184,53.23,209.5c8.63,8.13,18.06,16.37,28.12,24.64,7.32,6,15,12.06,22.9,18.08q7.91,6,16.15,12T137.1,276c25.41,17.61,52.26,34.52,78.59,49.69q14.34,8.26,28.64,16t28.37,14.81c21.9,11,43.35,20.92,63.86,29.43q13.19,5.48,25.81,10.16c11.89,4.42,23.37,8.31,34.31,11.59l1.1.33c25.73,7.66,47.42,11.69,64.48,12H464c21.64,0,36.3-6.38,43.58-19C516.67,385.39,511.66,364.69,492.72,339.51Z"></path>
+                    </g>
+                </svg>
+                <a href="#home" class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">Exo<span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-cyan-500 to-pink-500">Verse</span></a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#planets" class="nav-link">Planets</a>
+                <a href="#facts" class="nav-link">Facts</a>
+                <a href="#explore" class="nav-link">Explore</a>
+            </div>
+            <button id="mobile-menu" class="md:hidden">
+                <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="container mx-auto px-6 text-center z-10">
+            <h1 class="orbitron text-6xl md:text-8xl font-black mb-6" data-aos="fade-up">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600">EXPLORE THE</span>
+        
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-cyan-500 to-pink-500">PLANETS</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto " data-aos="fade-up" data-aos-delay="200">
+                Embark on a journey through our solar system and discover the fascinating worlds that orbit our Sun.
+            </p>
+            <a href="#planets" class="explore" data-aos="fade-up" data-aos-delay="400">
+                START EXPLORATION
+            </a>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-feather="chevron-down" class="w-8 h-8 text-white"></i>
+        </div>
+    </section>
+
+    <!-- Planets Section -->
+    <section id="planets" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="orbitron text-5xl font-bold text-center mb-16" data-aos="fade-up">
+                MEET THE PLANETS
+            </h2>
+            
+            <div class="flex space-x-8 overflow-x-auto py-4 px-2 w-full scrollbar-hide">
+                <!-- Mercury -->
+                <div class="glass-morphism rounded-2xl p-6 hover-lift cursor-pointer w-1/3 flex-shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative mb-4">
+                        <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-gray-400 to-gray-600 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-transparent to-white opacity-20"></div>
+                            <div class="planet-glow w-40 h-40 bg-gray-500 -top-4 -left-4"></div>
+                        </div>
+                    </div>
+                    <h3 class="orbitron text-2xl font-bold mb-2">MERCURY</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-300 mb-2">The smallest planet and closest to the Sun</p>
+                        <p class="text-gray-400 text-sm italic">Surface temperatures range from -173°C at night to 427°C during the day.</p>
+                    </div>
+                    <div class="flex justify-between text-sm mt-6">
+                        <span>Distance: 58M km</span>
+                        <span>Day: 59 Earth days</span>
+                    </div>
+                </div>
+    
+                <!-- Venus -->
+                <div class="glass-morphism rounded-2xl p-6 hover-lift cursor-pointer w-1/3 flex-shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative mb-4">
+                        <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-yellow-300 to-orange-400 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-transparent to-white opacity-30"></div>
+                            <div class="planet-glow w-40 h-40 bg-yellow-600 -top-4 -left-4"></div>
+                        </div>
+                    </div>
+                    <h3 class="orbitron text-2xl font-bold mb-2">VENUS</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-300 mb-2">The hottest planet with thick atmosphere</p>
+                        <p class="text-gray-400 text-sm italic">Its atmosphere is mostly carbon dioxide, causing a runaway greenhouse effect.</p>
+                    </div>
+                    <div class="flex justify-between text-sm mt-6">
+                        <span>Distance: 108M km</span>
+                        <span>Day: 243 Earth days</span>
+                    </div>
+                </div>
+    
+                <!-- Earth -->
+                <div class="glass-morphism rounded-2xl p-6 hover-lift cursor-pointer w-1/3 flex-shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative mb-4">
+                        <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-green-500 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-transparent to-white opacity-20"></div>
+                            <div class="planet-glow w-40 h-40 bg-blue-500 -top-4 -left-4"></div>
+                        </div>
+                    </div>
+                    <h3 class="orbitron text-2xl font-bold mb-2">EARTH</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-300 mb-2">Our home, the only known planet with life</p>
+                        <p class="text-gray-400 text-sm italic">About 71% of Earth's surface is covered by water.</p>
+                    </div>
+                    <div class="flex justify-between text-sm mt-6">
+                        <span>Distance: 150M km</span>
+                        <span>Day: 24 hours</span>
+                    </div>
+                </div>
+    
+                <!-- Mars -->
+                <div class="glass-morphism rounded-2xl p-6 hover-lift cursor-pointer w-1/3 flex-shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative mb-4">
+                        <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-red-400 to-red-600 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-transparent to-white opacity-20"></div>
+                            <div class="planet-glow w-40 h-40 bg-red-500 -top-4 -left-4"></div>
+                        </div>
+                    </div>
+                    <h3 class="orbitron text-2xl font-bold mb-2">MARS</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-300 mb-2">The Red Planet with polar ice caps</p>
+                        <p class="text-gray-400 text-sm italic">Mars has the tallest volcano in the solar system, Olympus Mons.</p>
+                    </div>
+                    <div class="flex justify-between text-sm mt-6">
+                        <span>Distance: 228M km</span>
+                        <span>Day: 24.6 hours</span>
+                    </div>
+                </div>
+    
+                <!-- Jupiter -->
+                <div class="glass-morphism rounded-2xl p-6 hover-lift cursor-pointer w-1/3 flex-shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative mb-4">
+                        <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-orange-300 to-orange-500 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-transparent to-white opacity-20"></div>
+                            <div class="planet-glow w-40 h-40 bg-orange-500 -top-4 -left-4"></div>
+                        </div>
+                    </div>
+                    <h3 class="orbitron text-2xl font-bold mb-2">JUPITER</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-300 mb-2">The largest planet with a Great Red Spot</p>
+                        <p class="text-gray-400 text-sm italic">It has at least 79 moons, including Ganymede, the largest moon in the solar system.</p>
+                    </div>
+                    <div class="flex justify-between text-sm mt-6">
+                        <span>Distance: 778M km</span>
+                        <span>Day: 10 hours</span>
+                    </div>
+                </div>
+    
+                <!-- Saturn -->
+                <div class="glass-morphism rounded-2xl p-6 hover-lift cursor-pointer w-1/3 flex-shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="600">
+                    <div class="relative mb-4">
+                        <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-yellow-200 to-yellow-400 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-transparent to-white opacity-20"></div>
+                            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-48 h-48 border-4 border-yellow-300 rounded-full opacity-60"></div>
+                            <div class="planet-glow w-40 h-40 bg-yellow-400 -top-4 -left-4"></div>
+                        </div>
+                    </div>
+                    <h3 class="orbitron text-2xl font-bold mb-2">SATURN</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-300 mb-2">The ringed planet with beautiful rings</p>
+                        <p class="text-gray-400 text-sm italic">Its rings are mostly made of ice particles ranging from micrometers to meters in size.</p>
+                    </div>
+                    <div class="flex justify-between text-sm mt-6">
+                        <span>Distance: 1.4B km</span>
+                        <span>Day: 10.7 hours</span>
+                    </div>
+                </div>
+    
+                <!-- Uranus -->
+                <div class="glass-morphism rounded-2xl p-6 hover-lift cursor-pointer w-1/3 flex-shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="700">
+                    <div class="relative mb-4">
+                        <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-transparent to-white opacity-20"></div>
+                            <div class="planet-glow w-40 h-40 bg-cyan-500 -top-4 -left-4"></div>
+                        </div>
+                    </div>
+                    <h3 class="orbitron text-2xl font-bold mb-2">URANUS</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-300 mb-2">An ice giant with a unique sideways rotation</p>
+                        <p class="text-gray-400 text-sm italic">Its axis is tilted over 98°, causing extreme seasonal changes.</p>
+                    </div>
+                    <div class="flex justify-between text-sm mt-6">
+                        <span>Distance: 2.9B km</span>
+                        <span>Day: 17 hours</span>
+                    </div>
+                </div>
+    
+                <!-- Neptune -->
+                <div class="glass-morphism rounded-2xl p-6 hover-lift cursor-pointer w-1/3 flex-shrink-0 flex flex-col" data-aos="fade-up" data-aos-delay="800">
+                    <div class="relative mb-4">
+                        <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-700 to-indigo-900 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-t from-transparent to-white opacity-20"></div>
+                            <div class="planet-glow w-40 h-40 bg-blue-800 -top-4 -left-4"></div>
+                        </div>
+                    </div>
+                    <h3 class="orbitron text-2xl font-bold mb-2">NEPTUNE</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-300 mb-2">The farthest known planet in our solar system</p>
+                        <p class="text-gray-400 text-sm italic">It has the strongest winds in the solar system, reaching up to 2,100 km/h.</p>
+                    </div>
+                    <div class="flex justify-between text-sm mt-6">
+                        <span>Distance: 4.5B km</span>
+                        <span>Day: 16 hours</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Facts Section -->
+    <section id="facts" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="orbitron text-5xl font-bold text-center mb-16" data-aos="fade-up">
+                AMAZING FACTS
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Solar Wind -->
+                <div class="glass-morphism rounded-2xl p-8" data-aos="fade-right">
+                    <i data-feather="wind" class="w-12 h-12 text-cyan-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Solar Wind</h3>
+                    <p class="text-gray-300">
+                        The Sun emits a stream of charged particles called the solar wind, which shapes planetary atmospheres and creates auroras on Earth.
+                    </p>
+                </div>
+    
+                <!-- Moon's Influence -->
+                <div class="glass-morphism rounded-2xl p-8" data-aos="fade-right" data-aos-delay="100">
+                    <i data-feather="globe" class="w-12 h-12 text-gray-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Moon's Influence</h3>
+                    <p class="text-gray-300">
+                        Earth's Moon stabilizes our planet’s tilt, helping maintain a stable climate over millions of years.
+                    </p>
+                </div>
+    
+                <!-- Water Ice on Mercury -->
+                <div class="glass-morphism rounded-2xl p-8" data-aos="fade-right" data-aos-delay="200">
+                    <i data-feather="droplet" class="w-12 h-12 text-blue-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Water Ice on Mercury</h3>
+                    <p class="text-gray-300">
+                        Despite being closest to the Sun, Mercury has water ice in permanently shadowed craters near its poles.
+                    </p>
+                </div>
+    
+                <!-- Mars’ Dust Storms -->
+                <div class="glass-morphism rounded-2xl p-8" data-aos="fade-right" data-aos-delay="300">
+                    <i data-feather="cloud" class="w-12 h-12 text-red-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Mars’ Dust Storms</h3>
+                    <p class="text-gray-300">
+                        Mars experiences planet-wide dust storms that can last for months, sometimes covering the entire surface.
+                    </p>
+                </div>
+    
+                <!-- Jupiter’s Magnetic Field -->
+                <div class="glass-morphism rounded-2xl p-8" data-aos="fade-right" data-aos-delay="400">
+                    <i data-feather="zap" class="w-12 h-12 text-yellow-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Jupiter’s Magnetic Field</h3>
+                    <p class="text-gray-300">
+                        Jupiter has the strongest magnetic field of any planet in the solar system, 14 times stronger than Earth’s.
+                    </p>
+                </div>
+    
+                <!-- Saturn’s Density -->
+                <div class="glass-morphism rounded-2xl p-8" data-aos="fade-right" data-aos-delay="500">
+                    <i data-feather="box" class="w-12 h-12 text-yellow-300 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Saturn’s Density</h3>
+                    <p class="text-gray-300">
+                        Saturn is the least dense planet; it would float if placed in a giant bathtub of water!
+                    </p>
+                </div>
+    
+                <!-- Uranus’ Cold Temperature -->
+                <div class="glass-morphism rounded-2xl p-8" data-aos="fade-right" data-aos-delay="600">
+                    <i data-feather="thermometer" class="w-12 h-12 text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Uranus’ Cold Temperature</h3>
+                    <p class="text-gray-300">
+                        Uranus is the coldest planet in the solar system, with temperatures dropping below -224°C.
+                    </p>
+                </div>
+    
+                <!-- Neptune’s Great Dark Spot -->
+                <div class="glass-morphism rounded-2xl p-8" data-aos="fade-right" data-aos-delay="700">
+                    <i data-feather="circle" class="w-12 h-12 text-indigo-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Neptune’s Great Dark Spot</h3>
+                    <p class="text-gray-300">
+                        Neptune has a storm similar to Jupiter’s Great Red Spot called the Great Dark Spot, which can disappear and reappear.
+                    </p>
+                </div>
+    
+                <!-- Tidal Heating -->
+                <div class="glass-morphism rounded-2xl p-8" data-aos="fade-right" data-aos-delay="800">
+                    <i data-feather="fire" class="w-12 h-12 text-red-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Tidal Heating</h3>
+                    <p class="text-gray-300">
+                        Some moons, like Jupiter’s Io, experience intense tidal heating caused by gravitational forces, making them some of the most volcanically active bodies in the solar system.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- Explore Section -->
+    <section id="explore" class="py-20 relative">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="orbitron text-5xl font-bold mb-8" data-aos="fade-up">
+                READY TO EXPLORE?
+            </h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Join us as we embark on a journey through our solar system and discover the fascinating worlds that orbit our Sun!
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="#planets" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-lg font-bold hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300">
+                    START EXPLORATION
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 glass-morphism">
+        <div class="container mx-auto px-6">
+            </div>
+            <div class="text-center mt-4 text-black">
+                <p>&copy; 2025 The Odin Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
